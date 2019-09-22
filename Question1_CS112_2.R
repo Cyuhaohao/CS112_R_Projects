@@ -1,0 +1,15 @@
+#question1 for CS112 Assignment2
+set.seed(123)
+x=runif(99)
+y=10+3*x+rnorm(99)
+lm1=lm(y~x)
+summary(lm1)
+plot(x,y,main="Relationship between x and y")
+abline(lm1,col="red")
+x2=append(x,0.9)
+y2=append(y,-50)
+lm2=lm(y2~x2)
+summary(lm2)
+plot(x2,y2,main="Relationship between x2 and y2")
+abline(lm2,col="red")
+lm2
